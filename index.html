@@ -15,12 +15,12 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-      <div class="main-header__logo">
+      <a class="main-header__logo" href="">
         <span class="main-header__logo-text">Celestial</span>
         <span class="main-header__logo-description"
           >Покупки оптом из Китая</span
         >
-      </div>
+      </a>
       <div class="main-header__menu">
         <div class="main-header__menu-up">
           <div class="main-header__menu-up-location">
@@ -33,14 +33,29 @@
             <span class="main-header__menu-up-location-text">Екатеринбург</span>
           </div>
           <ul class="main-header__menu-up-list">
-            <li class="main-header__menu-up-item">О компании</li>
-            <li class="main-header__menu-up-item">Покупателям</li>
+            <li
+              class="main-header__menu-up-item main-header__menu-up-item--one"
+            >
+              О компании
+            </li>
+            <li
+              class="main-header__menu-up-item main-header__menu-up-item--two"
+            >
+              Покупателям
+            </li>
             <li class="main-header__menu-up-item">Поставщикам</li>
             <li class="main-header__menu-up-item">Контакты</li>
           </ul>
         </div>
         <div class="main-header__menu-down">
-          <button class="main-header__menu-down-button">Каталог товаров</button>
+          <button class="main-header__menu-down-button">
+            <div class="line__block">
+              <span class="line line--one"></span>
+              <span class="line line--two"></span>
+              <span class="line line--three"></span>
+            </div>
+            <span>Каталог товаров</span>
+          </button>
           <div class="main-header__menu-down-search-wrapper">
             <svg
               class="main-header__menu-down-search-icon"
@@ -79,5 +94,6 @@
         </div>
       </div>
     </header>
+    <script src="script.js"></script>
   </body>
 </html>
