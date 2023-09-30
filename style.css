@@ -13,6 +13,10 @@
   padding: 0;
   border: 0;
 }
+html,
+body {
+  width: 100%;
+}
 
 .page-body {
   font-family: 'Golos Text', sans-serif;
@@ -20,6 +24,10 @@
   font-weight: 400;
   max-width: 1920px;
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* 
@@ -152,6 +160,10 @@
 
 .line--three {
   width: 12px;
+}
+
+.crossed {
+  transform: rotate(45deg) translateX(20%) translateY(-50%);
 }
 
 .main-header__menu-down-search-wrapper {
