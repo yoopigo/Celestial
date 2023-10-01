@@ -1,8 +1,10 @@
 const toggleButton = document.querySelector('.main-header__menu-down-button');
-const lines = document.querySelectorAll('.line');
+const lineOne = document.querySelector('.line--one');
+const lineTwo = document.querySelector('.line--two');
+const lineThree = document.querySelector('.line--three');
 
-toggleButton.addEventListener('click', function () {
-  for (let i = 0; i < lines.length; i++) {
-    lines[i].classList.toggle('crossed');
-  }
+toggleButton.addEventListener('click', () => {
+  lineOne.classList.toggle('crossed-one');
+  lineTwo.classList.toggle('crossed-two');
+  lineThree.classList.toggle('crossed-three');
 });

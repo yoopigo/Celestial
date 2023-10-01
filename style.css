@@ -136,7 +136,7 @@ a {
   background-color: #0064d8;
   font-size: 16px;
   line-height: 24px;
-  min-height: 48px;
+  height: 48px;
   border-radius: 10px;
   margin-right: 20px;
   border: 0;
@@ -147,6 +147,7 @@ a {
 
 .line__block {
   margin-top: 5px;
+  position: relative;
 }
 
 .line {
@@ -155,15 +156,29 @@ a {
   height: 2px;
   background-color: #fff;
   margin-bottom: 4px;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .line--three {
   width: 12px;
 }
 
-.crossed {
-  transform: rotate(45deg) translateX(20%) translateY(-50%);
+.crossed-one {
+  transform: rotate(45deg) translateX(30%) translateY(110%);
+  position: absolute;
+  top: -5px;
+}
+
+.crossed-two {
+  transform: scale(0);
+}
+
+.crossed-three {
+  transform: rotate(-45deg) translateX(30%) translateY(110%);
+  width: 18px;
+  position: absolute;
+  top: 3px;
+  left: -3px;
 }
 
 .main-header__menu-down-search-wrapper {
