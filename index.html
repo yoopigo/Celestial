@@ -37,11 +37,38 @@
               class="main-header__menu-up-item main-header__menu-up-item--one"
             >
               О компании
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+              >
+                <path
+                  stroke="#8285A5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m4 6.67 4 4 4-4"
+                />
+              </svg>
             </li>
             <li
               class="main-header__menu-up-item main-header__menu-up-item--two"
             >
-              Покупателям
+              Покупателям<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+              >
+                <path
+                  stroke="#8285A5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m4 6.67 4 4 4-4"
+                />
+              </svg>
             </li>
             <li class="main-header__menu-up-item">Поставщикам</li>
             <li class="main-header__menu-up-item">Контакты</li>
@@ -79,6 +106,7 @@
               class="main-header__menu-down-search"
               placeholder="Поиск товаров"
             />
+            <span class="clear-btn">✕</span>
           </div>
           <div class="main-header__menu-down-button-panel">
             <a class="main-header__menu-down-favorites">
@@ -92,6 +120,34 @@
             <button class="main-header__menu-down-login">Войти</button>
           </div>
         </div>
+      </div>
+    </header>
+    <header class="mobile-header">
+      <a class="main-header__logo main-header__logo--mobile" href="">
+        <span class="main-header__logo-text main-header__logo-text--mobile"
+          >Celestial</span
+        >
+        <span
+          class="main-header__logo-description main-header__logo-description--mobile"
+          >Покупки оптом из Китая</span
+        >
+      </a>
+      <div class="mobile-header__menu">
+        <button
+          class="mobile-header__menu-item mobile-header__menu-item-local"
+        ></button>
+        <button
+          class="mobile-header__menu-item mobile-header__menu-item-search"
+        ></button>
+        <button
+          class="mobile-header__menu-item mobile-header__menu-item-burger"
+        >
+          <div class="line__block">
+            <span class="line line--one line line--one-mobile-one"></span>
+            <span class="line line--two line line--two-mobile-two"></span>
+            <span class="line line--three line line--three-mobile-three"></span>
+          </div>
+        </button>
       </div>
     </header>
     <script src="script.js"></script>
