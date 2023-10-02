@@ -42,42 +42,58 @@ const slideContainer = document.querySelector('.slide-container');
 const slides = document.querySelectorAll('.slide-container img');
 const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
+let width;
 
-function showSlide(index) {
-  slideContainer.style.transform = `translateX(-${index * 100}%)`;
-}
-
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
-  updateDots();
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-  updateDots();
-}
-
-function updateDots() {
-  dots.forEach((dot, index) => {
-    if (index === currentIndex) {
-      dot.classList.add('active-dot');
-    } else {
-      dot.classList.remove('active-dot');
-    }
+function init() {
+  width = document.querySelector('.slider').offsetWidth;
+  slideContainer.style.width = width * slides.length + 'px';
+  slides.forEach((item) => {
+    item.style.width = width + 'px';
+    item.style.height = 'auto';
   });
+  rollSlider();
+  dots.forEach((dot) => {
+    dot.classList.remove('active-dot');
+  });
+  dots[currentIndex].classList.add('active-dot');
 }
 
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
-    showSlide(currentIndex);
-    updateDots();
-  });
+function updateUI() {
+  const dotsContainer = document.querySelector('.dots-container');
+  const prevBtn = document.querySelector('.slider__button-prev');
+  const nextBtn = document.querySelector('.slider__button-next');
+  const slider = document.querySelector('.slider');
+  const parentWidth = slider.offsetWidth;
+
+  dotsContainer.style.left =
+    (parentWidth - dotsContainer.offsetWidth) / 2 + 'px';
+  prevBtn.style.left = '20px';
+  nextBtn.style.right = '20px';
+}
+
+window.addEventListener('resize', function () {
+  init();
+  updateUI();
 });
 
-prevBtn.addEventListener('click', prevSlide);
-nextBtn.addEventListener('click', nextSlide);
+nextBtn.addEventListener('click', function () {
+  currentIndex++;
+  if (currentIndex >= slides.length - 2) {
+    currentIndex = 0;
+  }
+  init();
+  rollSlider();
+});
 
-showSlide(currentIndex);
+prevBtn.addEventListener('click', function () {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 3;
+  }
+  init();
+  rollSlider();
+});
+
+function rollSlider() {
+  slideContainer.style.transform = 'translate(-' + currentIndex * width + 'px)';
+}
