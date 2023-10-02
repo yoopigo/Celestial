@@ -33,3 +33,51 @@ const clearBtn = document.querySelector('.clear-btn');
 clearBtn.addEventListener('click', () => {
   searchInput.value = '';
 });
+
+//slider
+
+const prevBtn = document.querySelector('.slider__button-prev');
+const nextBtn = document.querySelector('.slider__button-next');
+const slideContainer = document.querySelector('.slide-container');
+const slides = document.querySelectorAll('.slide-container img');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+
+function showSlide(index) {
+  slideContainer.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+  updateDots();
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+  updateDots();
+}
+
+function updateDots() {
+  dots.forEach((dot, index) => {
+    if (index === currentIndex) {
+      dot.classList.add('active-dot');
+    } else {
+      dot.classList.remove('active-dot');
+    }
+  });
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    showSlide(currentIndex);
+    updateDots();
+  });
+});
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+showSlide(currentIndex);
