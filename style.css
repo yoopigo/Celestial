@@ -451,3 +451,26 @@ a {
 .active-dot {
   opacity: 100;
 }
+
+/* 
+  advantages
+*/
+
+.advantages {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.advantage {
+  padding: 16px 20px 16px 80px;
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 16px;
+  background: #f2f7fd;
+
+  font-weight: 600;
+  line-height: 150%;
+}
