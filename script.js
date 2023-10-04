@@ -97,3 +97,26 @@ prevBtn.addEventListener('click', function () {
 function rollSlider() {
   slideContainer.style.transform = 'translate(-' + currentIndex * width + 'px)';
 }
+
+//Advantages
+
+const advantages = document.querySelector('.advantages');
+let isDragging = false;
+let startX, scrollLeft;
+
+advantages.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startX = e.pageX - advantages.offsetLeft;
+  scrollLeft = advantages.scrollLeft;
+});
+
+window.addEventListener('mouseup', () => {
+  isDragging = false;
+});
+
+window.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const x = e.pageX - advantages.offsetLeft;
+  const scrollX = scrollLeft - (x - startX);
+  advantages.scrollLeft = scrollX;
+});
