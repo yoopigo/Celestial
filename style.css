@@ -461,11 +461,9 @@ a {
 .advantages {
   display: flex;
   gap: 20px;
-  justify-content: flex;
   margin-top: 20px;
   overflow: hidden;
   cursor: pointer;
-  flex-wrap: no-wrap;
 }
 @media (max-width: 1024px) {
   .advantages {
@@ -473,9 +471,9 @@ a {
   }
 }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   .advantages {
-    display: 11px;
+    gap: 11px;
   }
 }
 
@@ -527,4 +525,76 @@ a {
     font-weight: 500;
     line-height: 140%;
   }
+}
+
+/* 
+  products-categories
+*/
+.products-categories {
+  margin-top: 60px;
+}
+
+.products-categories__title {
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.44px;
+  margin-bottom: 30px;
+}
+
+.products-categories__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.products-categories-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.products-categories__right {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.products-categories__item {
+  max-width: 230px;
+}
+
+.products-categories__item-img {
+  background-color: #7cd3ff;
+  border-radius: 16px;
+}
+
+.products-categories__item-img-2 {
+  background-color: #ffe5c3;
+}
+
+.products-categories__item-img-3 {
+  background-color: #fff27a;
+}
+
+.products-categories__item-img-4 {
+  background-color: #76efc3;
+}
+
+.products-categories__item-img-5 {
+  background-color: #ffbc6d;
+}
+
+.products-categories__item-img-6 {
+  background-color: #7cbbff;
+}
+
+.pproducts-categories__item-img-7 {
+  background-color: #f1f1f1;
+}
+
+.products-categories__item-img-8 {
+  background-color: #f1f386;
 }
