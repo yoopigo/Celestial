@@ -553,6 +553,7 @@ a {
 
 .products-categories-wrapper {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -560,15 +561,23 @@ a {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .products-categories__item {
   max-width: 230px;
 }
 
+.products-categories__item-name {
+  font-weight: 600;
+  line-height: 150%;
+  text-align: center;
+}
+
 .products-categories__item-img {
   background-color: #7cd3ff;
   border-radius: 16px;
+  height: 230px;
 }
 
 .products-categories__item-img-2 {
