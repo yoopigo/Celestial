@@ -672,3 +672,55 @@ a {
 .products-categories__item-img-8 {
   background-color: #f1f386;
 }
+
+/* 
+  banner
+*/
+
+.banner {
+  max-width: 100vw;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 36px;
+}
+
+@media (max-width: 1024px) {
+  .banner-img--table {
+    margin-top: 16px;
+  }
+}
+
+.banner-img {
+  width: 100%;
+  height: 175px;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .banner-img--desc {
+    display: none;
+  }
+}
+
+.banner-img--table {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .banner-img--table {
+    display: block;
+  }
+}
+
+.banner-img--phone {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .banner-img--phone {
+    display: block;
+  }
+}
