@@ -551,10 +551,14 @@ a {
   gap: 8px;
 }
 
+.products-categories__item:hover .products-categories__item-name {
+  color: #0064d8;
+}
 .products-categories-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .products-categories__right {
@@ -562,16 +566,19 @@ a {
   gap: 20px;
   flex-wrap: wrap;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .products-categories__item {
   max-width: 230px;
+  cursor: pointer;
 }
 
 .products-categories__item-name {
   font-weight: 600;
   line-height: 150%;
   text-align: center;
+  margin: 0;
 }
 
 .products-categories__item-img {
