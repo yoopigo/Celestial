@@ -761,20 +761,15 @@ ul.drop {
   width: 210px;
 }
 
-li {
-  margin: 2px;
-}
-
-li:hover {
-  background: yellow;
-}
-
 ul.drop.visible {
   display: block;
 }
 
 .map {
   margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  gap: 60px;
 }
 
 .map__info-title {
@@ -794,9 +789,35 @@ ul.drop.visible {
   height: 60px;
   font-size: 16px;
   box-sizing: border-box;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .map__info-input:focus,
 .map__info-input:active {
   outline: #0056d8;
+}
+
+.map__info-item {
+  display: flex;
+  width: 440px;
+  padding: 20px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid #e7e7e7;
+  cursor: pointer;
+}
+
+.map__info-item-title {
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.map__info-item-info {
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.map__ya {
+  width: 100%;
 }
