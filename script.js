@@ -145,7 +145,7 @@ ymaps.ready(function () {
   var myMap = new ymaps.Map('yaMap', {
     center: [56.828, 60.684324],
     zoom: 11,
-    controls: ['zoomControl'],
+    controls: ['zoomControl', 'geolocationControl'],
   });
 
   var myPlacemark = new ymaps.Placemark(
