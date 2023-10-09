@@ -306,13 +306,13 @@
           <ul class="drop">
             <li>Екатеринбург</li>
           </ul>
-          <div class="map__info-item">
+          <div class="map__info-item map__info-item-1">
             <span class="map__info-item-title">Магазин на Черняховского</span>
             <span class="map__info-item-info">улица Черняховского, 99</span>
             <span class="map__info-item-info">+7 (999) 012-34-56</span>
             <span class="map__info-item-info">Ежедневно с 09:00 до 22:00</span>
           </div>
-          <div class="map__info-item">
+          <div class="map__info-item map__info-item-2">
             <span class="map__info-item-title">Магазин на Блюхера</span>
             <span class="map__info-item-info">улица Блюхера, 99</span>
             <span class="map__info-item-info"
@@ -321,16 +321,10 @@
             <span class="map__info-item-info">Ежедневно с 10:00 до 21:00</span>
           </div>
         </div>
-        <div class="map__ya">
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4600c7db7395298db861ea7a6d1649a1b28d7e18ea1bbba289c07a0d6609a78a&amp;source=constructor"
-            width="100%"
-            height="650"
-            frameborder="0"
-          ></iframe>
-        </div>
+        <div id="yaMap" class="map__ya"></div>
       </section>
     </main>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=fa46f817-55b2-4b97-9ed6-76a3dba373f6&lang=ru_RU"></script>
     <script src="script.js"></script>
   </body>
 </html>

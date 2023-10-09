@@ -140,3 +140,56 @@ function dropSelect(e) {
   dropInput.value = e.target.textContent;
   hide();
 }
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('yaMap', {
+    center: [56.828, 60.684324],
+    zoom: 11,
+    controls: ['zoomControl'],
+  });
+
+  var myPlacemark = new ymaps.Placemark(
+    [56.761737, 60.761418],
+    {
+      balloonContent:
+        '<strong>Магазин на Черняховского</strong><br>улица Черняховского, 99<br>+7 (999) 012-34-56<br>Ежедневно с 09:00 до 22:00',
+    },
+    {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/map/pin.svg',
+      iconImageSize: [48, 56],
+      iconImageOffset: [-24, -36],
+    }
+  );
+
+  var myPlacemark2 = new ymaps.Placemark(
+    [56.865259, 60.667983],
+    {
+      balloonContent:
+        '<strong>Магазин на Блюхера</strong><br>улица Блюхера, 99<br>+7 (999) 012-34-56 (доб. 02)<br>Ежедневно с 09:00 до 22:00',
+    },
+    {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/map/pin.svg',
+      iconImageSize: [48, 56],
+      iconImageOffset: [-24, -36],
+    }
+  );
+
+  myMap.geoObjects.add(myPlacemark);
+  myMap.geoObjects.add(myPlacemark2);
+
+  document
+    .querySelector('.map__info-item-1')
+    .addEventListener('click', function () {
+      myMap.setCenter([56.761737, 60.761418]);
+      myPlacemark.balloon.open();
+    });
+
+  document
+    .querySelector('.map__info-item-2')
+    .addEventListener('click', function () {
+      myMap.setCenter([56.865259, 60.667983]);
+      myPlacemark2.balloon.open();
+    });
+});
