@@ -756,20 +756,26 @@ ul.drop {
   display: none;
   list-style-type: none;
   padding-left: 0;
-  border: 1px solid #ddd;
+  border: 1px solid #e7e7e7;
   margin-top: 0;
   width: 210px;
 }
 
 ul.drop.visible {
-  display: block;
+  display: flex;
+  align-items: center;
+  width: 430px;
+  height: 30px;
+  padding-left: 12px;
 }
 
 .map {
   margin-top: 60px;
   margin-bottom: 60px;
-  display: flex;
-  gap: 60px;
+  display: grid;
+  column-gap: 60px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto auto;
 }
 
 .map__info-title {
@@ -821,4 +827,6 @@ ul.drop.visible {
 .map__ya {
   width: 100%;
   height: 650px;
+  grid-column: 2;
+  grid-row: 1 / span 5;
 }
