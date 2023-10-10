@@ -778,6 +778,13 @@ ul.drop.visible {
   grid-template-rows: auto auto auto auto;
 }
 
+@media (max-width: 375px) {
+  .map {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 .map__info-title {
   font-size: 44px;
   font-weight: 700;
@@ -785,6 +792,18 @@ ul.drop.visible {
   letter-spacing: -0.44px;
   margin-top: 0px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .map__info-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .map__info-title {
+    grid-row: 1;
+  }
 }
 
 .map__info-input {
@@ -797,6 +816,26 @@ ul.drop.visible {
   box-sizing: border-box;
   margin-bottom: 20px;
   cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .map__info-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .map__info-container {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .map__info-container {
+    grid-row: 2;
+    width: 100%;
+  }
 }
 
 .map__info-input:focus,
@@ -814,6 +853,18 @@ ul.drop.visible {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .map__info-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .map__info-item {
+    display: none;
+  }
+}
+
 .map__info-item-title {
   font-weight: 600;
   line-height: 150%;
@@ -829,4 +880,19 @@ ul.drop.visible {
   height: 650px;
   grid-column: 2;
   grid-row: 1 / span 5;
+}
+
+@media (max-width: 1024px) {
+  .map__ya {
+    grid-row: 2 / span 5;
+    height: 400px;
+  }
+}
+
+@media (max-width: 375px) {
+  .map__ya {
+    grid-column: 1;
+    grid-row: 3;
+    height: 400px;
+  }
 }
