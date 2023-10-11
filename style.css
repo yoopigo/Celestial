@@ -896,3 +896,53 @@ ul.drop.visible {
     height: 400px;
   }
 }
+
+/* 
+  login
+*/
+
+.login {
+  width: 600px;
+  padding: 40px;
+  border-radius: 16px;
+  background: #fff;
+  position: fixed;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.login__title-text {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.login__title-button {
+  background-image: url(img/login/close_button.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 99%;
+}
+
+.login__data {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
