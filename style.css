@@ -907,7 +907,6 @@ ul.drop.visible {
   border-radius: 16px;
   background: #fff;
   position: fixed;
-  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -919,7 +918,7 @@ ul.drop.visible {
 .login__title {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .login__title-text {
@@ -945,4 +944,86 @@ ul.drop.visible {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.login__data-title {
+  line-height: 150%;
+  margin: 0;
+}
+
+.login__data-input {
+  height: 60px;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  font-family: Golos Text VF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  padding-left: 12px;
+  width: 100%;
+}
+
+.login__data-password-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.login__data-password-wrapper svg {
+  position: absolute;
+  cursor: pointer;
+  right: 0px;
+  top: 20px;
+}
+
+.login__data-password-display {
+  display: none;
+}
+
+.login__data-input:focus {
+  outline: none;
+  border: 2px solid #0056d8;
+}
+
+.login__entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login__entry-button {
+  padding: 12px 30px;
+  color: #fff;
+  background-color: #0064d8;
+  font-size: 16px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+.login__entry-button:hover,
+.login__entry-button:focus {
+  background-color: #0056d8;
+}
+
+.login__entry-remindpass {
+  color: #0064d8;
+}
+
+.login__regestration {
+  padding-top: 20px;
+  border-top: 1px solid #e7e7e7;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.login__regestration-text {
+  color: #8285a5;
+}
+
+.login__regestration-link {
+  color: #0064d8;
+  cursor: pointer;
 }

@@ -193,3 +193,25 @@ ymaps.ready(function () {
       myPlacemark2.balloon.open();
     });
 });
+
+//LoginModal
+
+const passwordInput = document.querySelector('.login__data-password');
+const showPasswordButtonOff = document.querySelector(
+  '.login__data-password-swg--one'
+);
+const showPasswordButtonOn = document.querySelector(
+  '.login__data-password-swg--two'
+);
+
+showPasswordButtonOff.addEventListener('click', () => {
+  showPasswordButtonOff.classList.add('login__data-password-display');
+  showPasswordButtonOn.classList.remove('login__data-password-display');
+  passwordInput.type = 'text';
+});
+
+showPasswordButtonOn.addEventListener('click', () => {
+  showPasswordButtonOn.classList.add('login__data-password-display');
+  showPasswordButtonOff.classList.remove('login__data-password-display');
+  passwordInput.type = 'password';
+});

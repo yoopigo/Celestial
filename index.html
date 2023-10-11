@@ -329,15 +329,51 @@
         </div>
         <div class="login__data">
           <p class="login__data-title">Вход через E-mail:</p>
-          <input type="email" class="login__data-email" placeholder="E-mail" />
           <input
-            type="password"
-            class="login__data-password"
-            placeholder="Пароль"
+            type="email"
+            class="login__data-email login__data-input"
+            placeholder="E-mail"
           />
+          <div class="login__data-password-wrapper">
+            <input
+              type="password"
+              class="login__data-password login__data-input"
+              placeholder="Пароль"
+            />
+            <svg
+              class="login__data-password-swg--one"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <path
+                stroke="#212328"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19.5 16 17 12.6m-5 4.9V14m-7.5 2L7 12.6M3 8c3.6 8 14.4 8 18 0"
+              />
+            </svg>
+            <svg
+              class="login__data-password-swg--two login__data-password-display"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <path
+                stroke="#212328"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 13c3.6-8 14.4-8 18 0m-9 4a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"
+              />
+            </svg>
+          </div>
         </div>
         <div class="login__entry">
-          <button class="login__entry-button"></button>
+          <button class="login__entry-button">Войти</button>
           <a href="/" class="login__entry-remindpass">Забыли пароль?</a>
         </div>
         <div class="login__regestration">
