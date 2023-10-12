@@ -203,6 +203,9 @@ const showPasswordButtonOff = document.querySelector(
 const showPasswordButtonOn = document.querySelector(
   '.login__data-password-swg--two'
 );
+const closeLogin = document.querySelector('.login__title-button');
+const loginModal = document.querySelector('.login');
+const openLogin = document.querySelector('.main-header__menu-down-login');
 
 showPasswordButtonOff.addEventListener('click', () => {
   showPasswordButtonOff.classList.add('login__data-password-display');
@@ -214,4 +217,19 @@ showPasswordButtonOn.addEventListener('click', () => {
   showPasswordButtonOn.classList.add('login__data-password-display');
   showPasswordButtonOff.classList.remove('login__data-password-display');
   passwordInput.type = 'password';
+});
+
+closeLogin.addEventListener('click', () => {
+  loginModal.classList.add('login__data-password-display');
+});
+
+openLogin.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  loginModal.classList.toggle('login__data-password-display');
+});
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    loginModal.classList.add('login__data-password-display');
+  }
 });
