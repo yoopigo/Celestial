@@ -206,6 +206,7 @@ const showPasswordButtonOn = document.querySelector(
 const closeLogin = document.querySelector('.login__title-button');
 const loginModal = document.querySelector('.login');
 const openLogin = document.querySelector('.main-header__menu-down-login');
+const openLoginMobile = document.querySelector('.tablet-menu__login ');
 
 showPasswordButtonOff.addEventListener('click', () => {
   showPasswordButtonOff.classList.add('login__data-password-display');
@@ -232,4 +233,9 @@ document.addEventListener('keydown', (evt) => {
   if (evt.key === 'Escape') {
     loginModal.classList.add('login__data-password-display');
   }
+});
+
+openLoginMobile.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  loginModal.classList.toggle('login__data-password-display');
 });

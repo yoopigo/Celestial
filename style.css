@@ -915,6 +915,12 @@ ul.drop.visible {
   gap: 20px;
 }
 
+@media (max-width: 1024px) {
+  .login {
+    top: 60%;
+  }
+}
+
 .login__title {
   display: flex;
   justify-content: space-between;
@@ -1026,4 +1032,56 @@ ul.drop.visible {
 .login__regestration-link {
   color: #0064d8;
   cursor: pointer;
+}
+
+/* 
+  tablet-menu
+*/
+
+.table-menu__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tablet-menu {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  height: 64px;
+  border-top: 1px solid #8285a5;
+  padding: 0 120px;
+}
+
+@media (max-width: 1024px) {
+  .tablet-menu {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    gap: 32px;
+    width: 100%;
+    justify-content: center;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 375px) {
+  .tablet-menu {
+    gap: 15px;
+  }
+}
+
+.tablet-menu__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.tablet-menu__item span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  color: #8285a5;
 }
