@@ -921,10 +921,24 @@ ul.drop.visible {
   }
 }
 
+@media (max-width: 375px) {
+  .login {
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+  }
+}
+
 .login__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 375px) {
+  .login__title {
+    padding: 20px 16px 0px 16px;
+  }
 }
 
 .login__title-text {
@@ -952,6 +966,12 @@ ul.drop.visible {
   gap: 16px;
 }
 
+@media (max-width: 375px) {
+  .login__data {
+    padding: 20px 16px 0px 16px;
+  }
+}
+
 .login__data-title {
   line-height: 150%;
   margin: 0;
@@ -967,6 +987,12 @@ ul.drop.visible {
   line-height: 150%;
   padding-left: 12px;
   width: 100%;
+}
+
+@media (max-width: 375px) {
+  .login__data-input {
+    width: 97%;
+  }
 }
 
 .login__data-password-wrapper {
@@ -996,6 +1022,13 @@ ul.drop.visible {
   align-items: center;
 }
 
+@media (max-width: 375px) {
+  .login__entry {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
 .login__entry-button {
   padding: 12px 30px;
   color: #fff;
@@ -1017,12 +1050,29 @@ ul.drop.visible {
   color: #0064d8;
 }
 
+@media (max-width: 375px) {
+  .login__entry-remindpass {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+}
+
 .login__regestration {
   padding-top: 20px;
   border-top: 1px solid #e7e7e7;
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
+}
+
+@media (max-width: 375px) {
+  .login__regestration {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .login__regestration-text {
