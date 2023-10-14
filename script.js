@@ -17,8 +17,11 @@ const lineOneMobile = document.querySelector('.line--one-mobile-one');
 const lineTwoMobile = document.querySelector('.line--two-mobile-two');
 const lineThreeMobile = document.querySelector('.line--three-mobile-three');
 
+const catalog = document.querySelector('.catalog ');
+
 toggleButton.addEventListener('click', () => {
   toggleLines(lineOne, lineTwo, lineThree);
+  catalog.classList.toggle('login__data-password-display');
 });
 
 toggleBlock.addEventListener('click', () => {
@@ -239,3 +242,5 @@ openLoginMobile.addEventListener('click', (evt) => {
   evt.preventDefault();
   loginModal.classList.toggle('login__data-password-display');
 });
+
+//Catalog
