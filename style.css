@@ -1012,10 +1012,6 @@ ul.drop.visible {
   top: 20px;
 }
 
-.login__data-password-display {
-  display: none;
-}
-
 .login__data-input:focus {
   outline: none;
   border: 2px solid #0056d8;
@@ -1153,4 +1149,29 @@ ul.drop.visible {
   background-color: #fff;
   top: 0;
   max-width: 1480px;
+  padding: 30px 0px 60px 204px;
+  display: flex;
+}
+.catalog__item {
+  list-style-type: none;
+}
+
+.catalog__item {
+  padding: 10px 8px 10px 16px;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  cursor: pointer;
+}
+
+.login__data-password-display {
+  display: none;
+}
+
+.catalog__item:hover,
+.catalog__item:hover svg path {
+  color: #0056d8;
+  stroke: #0056d8;
+  background-color: #f2f7fd;
 }
