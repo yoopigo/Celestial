@@ -244,3 +244,21 @@ openLoginMobile.addEventListener('click', (evt) => {
 });
 
 //Catalog
+
+document.addEventListener('DOMContentLoaded', function () {
+  var categories = document.getElementsByClassName('catalog__item');
+  for (var i = 0; i < categories.length; i++) {
+    categories[i].addEventListener('mouseover', function () {
+      var subcatalogItems = this.getElementsByClassName('subcatalog__items');
+      if (subcatalogItems.length > 0) {
+        subcatalogItems[0].style.display = 'block';
+      }
+    });
+    categories[i].addEventListener('mouseout', function () {
+      var subcatalogItems = this.getElementsByClassName('subcatalog__items');
+      if (subcatalogItems.length > 0) {
+        subcatalogItems[0].style.display = 'none';
+      }
+    });
+  }
+});
