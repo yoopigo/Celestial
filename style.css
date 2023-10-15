@@ -1175,3 +1175,7 @@ ul.drop.visible {
   stroke: #0056d8;
   background-color: #f2f7fd;
 }
+
+.subcatalog__item {
+  display: none;
+}
