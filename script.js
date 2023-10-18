@@ -7,7 +7,11 @@ function toggleLines(line1, line2, line3) {
 }
 
 const toggleButton = document.querySelector('.main-header__menu-down-button');
+const tabletButton = document.querySelector('.tablet-menu__catalog');
 const toggleBlock = document.querySelector('.mobile-header__menu-item-burger');
+const buttonTabletClosed = document.querySelector(
+  '.catalog__tablet-icon--cross'
+);
 
 const lineOne = document.querySelector('.line--one');
 const lineTwo = document.querySelector('.line--two');
@@ -24,8 +28,16 @@ toggleButton.addEventListener('click', () => {
   catalog.classList.toggle('login__data-password-display');
 });
 
+tabletButton.addEventListener('click', () => {
+  catalog.classList.toggle('login__data-password-display');
+});
+
 toggleBlock.addEventListener('click', () => {
   toggleLines(lineOneMobile, lineTwoMobile, lineThreeMobile);
+});
+
+buttonTabletClosed.addEventListener('click', () => {
+  catalog.classList.toggle('login__data-password-display');
 });
 
 //Search
@@ -246,18 +258,33 @@ openLoginMobile.addEventListener('click', (evt) => {
 //Catalog
 
 document.addEventListener('DOMContentLoaded', function () {
-  var categories = document.getElementsByClassName('catalog__item');
-  for (var i = 0; i < categories.length; i++) {
+  let categories = document.getElementsByClassName('catalog__item');
+  for (let i = 0; i < categories.length; i++) {
     categories[i].addEventListener('mouseover', function () {
-      var subcatalogItems = this.getElementsByClassName('subcatalog__items');
-      if (subcatalogItems.length > 0) {
-        subcatalogItems[0].style.display = 'block';
+      if (window.innerWidth > 1024) {
+        let subcatalogItems = this.getElementsByClassName('subcatalog__items');
+        if (subcatalogItems.length > 0) {
+          subcatalogItems[0].style.display = 'block';
+        }
       }
     });
     categories[i].addEventListener('mouseout', function () {
-      var subcatalogItems = this.getElementsByClassName('subcatalog__items');
-      if (subcatalogItems.length > 0) {
-        subcatalogItems[0].style.display = 'none';
+      if (window.innerWidth > 1024) {
+        let subcatalogItems = this.getElementsByClassName('subcatalog__items');
+        if (subcatalogItems.length > 0) {
+          subcatalogItems[0].style.display = 'none';
+        }
+      }
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  let categories = document.getElementsByClassName('catalog__item');
+  for (let i = 0; i < categories.length; i++) {
+    categories[i].addEventListener('click', function () {
+      if (window.innerWidth <= 1024) {
+        this.classList.toggle('active');
       }
     });
   }
