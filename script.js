@@ -278,14 +278,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-  let categories = document.getElementsByClassName('catalog__item');
-  for (let i = 0; i < categories.length; i++) {
-    categories[i].addEventListener('click', function () {
-      if (window.innerWidth <= 1024) {
-        this.classList.toggle('active');
-      }
-    });
-  }
-});

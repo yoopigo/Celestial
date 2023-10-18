@@ -1255,7 +1255,7 @@ ul.drop.visible {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 10px 10px 0 10px;
+    padding: 0 10px;
   }
 }
 
