@@ -1200,9 +1200,16 @@ ul.drop.visible {
   stroke: #0056d8;
 }
 
-.subcatalog__items {
-  display: none;
+.subcatalog__wrapper {
   position: absolute;
+  top: 1px;
+  display: none;
+  top: 118px;
+  left: 857px;
+  z-index: 2;
+}
+
+.subcatalog__items {
   top: -90px;
   left: 364px;
   min-width: 390px;
@@ -1263,7 +1270,8 @@ ul.drop.visible {
   .subcatalog__items {
     display: none;
   }
-  .catalog__item.active .subcatalog__items {
-    display: block;
-  }
+}
+
+.visible {
+  display: block;
 }

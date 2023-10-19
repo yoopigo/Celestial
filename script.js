@@ -257,24 +257,9 @@ openLoginMobile.addEventListener('click', (evt) => {
 
 //Catalog
 
-document.addEventListener('DOMContentLoaded', function () {
-  let categories = document.getElementsByClassName('catalog__item');
-  for (let i = 0; i < categories.length; i++) {
-    categories[i].addEventListener('mouseover', function () {
-      if (window.innerWidth > 1024) {
-        let subcatalogItems = this.getElementsByClassName('subcatalog__items');
-        if (subcatalogItems.length > 0) {
-          subcatalogItems[0].style.display = 'block';
-        }
-      }
-    });
-    categories[i].addEventListener('mouseout', function () {
-      if (window.innerWidth > 1024) {
-        let subcatalogItems = this.getElementsByClassName('subcatalog__items');
-        if (subcatalogItems.length > 0) {
-          subcatalogItems[0].style.display = 'none';
-        }
-      }
-    });
-  }
+const subcatalogWrapper = document.querySelector('.subcatalog__wrapper');
+const catalogItemSub = document.querySelector('.catalog__item-sub');
+
+catalogItemSub.addEventListener('mouseover', () => {
+  subcatalogWrapper.classList.add('visible');
 });
