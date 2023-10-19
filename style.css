@@ -1143,16 +1143,17 @@ ul.drop.visible {
   catalog
 */
 
-.catalog {
-  position: relative;
+.catalog-wrapper {
+  position: fixed;
   width: 100%;
-  z-index: 1;
-  height: 300vh;
+  height: 100%;
+  z-index: 5;
   background-color: #fff;
-  top: 0;
-  max-width: 90%;
+  top: 125px;
+}
+
+.catalog {
   display: flex;
-  top: -2265px;
 }
 
 @media (max-width: 1024px) {
@@ -1189,10 +1190,6 @@ ul.drop.visible {
   position: relative;
 }
 
-.login__data-password-display {
-  display: none;
-}
-
 .catalog__item:hover,
 .catalog__item:hover svg path,
 .catalog__item:hover .subcatalog__items {
@@ -1202,11 +1199,9 @@ ul.drop.visible {
 
 .subcatalog__wrapper {
   position: absolute;
-  top: 1px;
   display: none;
-  top: 118px;
-  left: 857px;
-  z-index: 2;
+  left: 560px;
+  z-index: 5;
 }
 
 .subcatalog__items {
@@ -1274,4 +1269,8 @@ ul.drop.visible {
 
 .visible {
   display: block;
+}
+
+.login__data-password-display {
+  display: none;
 }

@@ -21,7 +21,7 @@ const lineOneMobile = document.querySelector('.line--one-mobile-one');
 const lineTwoMobile = document.querySelector('.line--two-mobile-two');
 const lineThreeMobile = document.querySelector('.line--three-mobile-three');
 
-const catalog = document.querySelector('.catalog ');
+const catalog = document.querySelector('.catalog-wrapper');
 
 toggleButton.addEventListener('click', () => {
   toggleLines(lineOne, lineTwo, lineThree);
@@ -257,9 +257,24 @@ openLoginMobile.addEventListener('click', (evt) => {
 
 //Catalog
 
-const subcatalogWrapper = document.querySelector('.subcatalog__wrapper');
-const catalogItemSub = document.querySelector('.catalog__item-sub');
-
-catalogItemSub.addEventListener('mouseover', () => {
-  subcatalogWrapper.classList.add('visible');
+document.addEventListener('DOMContentLoaded', function () {
+  let categories = document.getElementsByClassName('catalog__item');
+  for (let i = 0; i < categories.length; i++) {
+    categories[i].addEventListener('mouseover', function () {
+      if (window.innerWidth > 1024) {
+        let subcatalogItems = this.getElementsByClassName('subcatalog__items');
+        if (subcatalogItems.length > 0) {
+          subcatalogItems[0].style.display = 'block';
+        }
+      }
+    });
+    categories[i].addEventListener('mouseout', function () {
+      if (window.innerWidth > 1024) {
+        let subcatalogItems = this.getElementsByClassName('subcatalog__items');
+        if (subcatalogItems.length > 0) {
+          subcatalogItems[0].style.display = 'none';
+        }
+      }
+    });
+  }
 });
