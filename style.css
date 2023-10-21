@@ -918,7 +918,7 @@ ul.drop.visible {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media (max-width: 1024px) {
@@ -1102,7 +1102,7 @@ ul.drop.visible {
   height: 64px;
   border-top: 1px solid #8285a5;
   padding: 0 120px;
-  z-index: 3;
+  z-index: 2;
 }
 
 @media (max-width: 1024px) {
@@ -1144,10 +1144,10 @@ ul.drop.visible {
 */
 
 .catalog-wrapper {
-  position: fixed;
+  position: absolute;
   width: 100%;
-  height: 100%;
-  z-index: 5;
+  height: 110%;
+  z-index: 2;
   background-color: #fff;
   top: 125px;
 }
@@ -1201,7 +1201,7 @@ ul.drop.visible {
   position: absolute;
   display: none;
   left: 560px;
-  z-index: 5;
+  z-index: 1;
 }
 
 .subcatalog__items {
