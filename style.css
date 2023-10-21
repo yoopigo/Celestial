@@ -340,10 +340,6 @@ a {
   position: relative;
 }
 
-/* 
-  slider
-*/
-
 .main {
   padding: 0px 220px 0px 220px;
   margin: 0 auto;
@@ -360,6 +356,10 @@ a {
     padding: 0px 16px;
   }
 }
+
+/* 
+  slider
+*/
 
 .slider {
   max-width: 1480px;
@@ -1166,6 +1166,7 @@ ul.drop.visible {
 .catalog__items {
   position: absolute;
   padding-left: 200px;
+  padding-top: 30px;
 }
 
 @media (max-width: 1024px) {
@@ -1173,6 +1174,7 @@ ul.drop.visible {
     padding-left: 0;
     width: 100%;
     top: 20px;
+    padding-top: 0;
   }
 }
 
@@ -1198,16 +1200,19 @@ ul.drop.visible {
 }
 
 .subcatalog__wrapper {
-  position: absolute;
+  position: relative;
   display: none;
   left: 560px;
   z-index: 1;
+  height: 97%;
+  background-color: #f2f7fd;
 }
 
 .subcatalog__items {
   top: -90px;
   left: 364px;
-  min-width: 390px;
+  max-width: 390px;
+  padding-top: 30px;
 }
 
 .catalog__item:hover .subcatalog__item {
@@ -1218,8 +1223,8 @@ ul.drop.visible {
   padding: 8px 16px;
   border-radius: 10px;
   border: 0;
-  color: #0064d8;
-  background-color: #dfeeff;
+  color: #0056d8;
+  background-color: #fff;
   font-size: 14px;
   margin-left: 12px;
   font-weight: 500;
@@ -1228,7 +1233,7 @@ ul.drop.visible {
 }
 
 .subcatalog__button:hover {
-  background-color: #0064d8;
+  background-color: #0056d8;
   color: #fff;
 }
 
@@ -1273,4 +1278,84 @@ ul.drop.visible {
 
 .login__data-password-display {
   display: none;
+}
+
+.catalog__slider {
+  max-width: 345px;
+  position: absolute;
+
+  top: 40px;
+  left: 797px;
+}
+
+.catalog__slide-container {
+  position: relative;
+  transition: transform 0.5s ease;
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.catalog__slider-button-next,
+.catalog__slider-button-prev {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  background: #fff;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+  border: 0;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  top: 45%;
+  z-index: 2;
+}
+
+.catalog__slider-button-next {
+  right: -25px;
+}
+
+.catalog__slider-button-prev {
+  left: -25px;
+}
+
+@media (max-width: 1024px) {
+  .slider__button-prev,
+  .slider__button-next {
+    display: none;
+  }
+}
+
+.slider__button-prev {
+  left: 20px;
+}
+
+.slider__button-next {
+  right: 20px;
+}
+
+.dots-container {
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  gap: 6px;
+  bottom: 13px;
+  left: 717px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.active-dot {
+  opacity: 100;
 }

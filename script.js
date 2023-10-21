@@ -290,12 +290,4 @@ document.addEventListener('DOMContentLoaded', () => {
   subcatalogItem.addEventListener('mouseover', () => {
     subcatalogWrapper.style.display = 'block';
   });
-
-  subcatalogWrapper.addEventListener('mouseover', function () {
-    subcatalogWrapper.style.display = 'block';
-  });
-
-  subcatalogWrapper.addEventListener('mouseleave', function () {
-    subcatalogWrapper.style.display = 'none';
-  });
 });
