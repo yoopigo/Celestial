@@ -1220,6 +1220,12 @@ ul.drop.visible {
   position: relative;
 }
 
+@media (max-width: 1024px) {
+  .catalog__item {
+    padding: 10px 30px 10px 30px;
+  }
+}
+
 .catalog__item:hover,
 .catalog__item:hover svg path,
 .catalog__item:hover .subcatalog__items {
@@ -1240,11 +1246,25 @@ ul.drop.visible {
   background-color: #f2f7fd;
 }
 
+@media (max-width: 1024px) {
+  .subcatalog__wrapper {
+    left: 0;
+    margin-top: 16px;
+    width: 100%;
+    padding-top: 30px 40px 0 40px;
+  }
+}
+
 .subcatalog__items {
   top: -90px;
   left: 364px;
-  max-width: 390px;
-  padding-top: 30px;
+  width: 390px;
+}
+
+@media (max-width: 1024px) {
+  .subcatalog__items {
+    width: 100%;
+  }
 }
 
 .catalog__item:hover .subcatalog__item {
@@ -1294,13 +1314,7 @@ ul.drop.visible {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 0 10px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .subcatalog__items {
-    display: none;
+    padding: 0 30px;
   }
 }
 

@@ -301,15 +301,21 @@ document.addEventListener('DOMContentLoaded', () => {
   let subcatalogWrapper = document.querySelector('.subcatalog__wrapper');
 
   subcatalogItem.addEventListener('mouseover', () => {
-    subcatalogWrapper.style.display = 'block';
+    if (window.innerWidth > 1024) {
+      subcatalogWrapper.style.display = 'block';
+    }
   });
 
   subcatalogWrapper.addEventListener('mouseover', function () {
-    subcatalogWrapper.style.display = 'block';
+    if (window.innerWidth > 1024) {
+      subcatalogWrapper.style.display = 'block';
+    }
   });
 
   subcatalogWrapper.addEventListener('mouseleave', function () {
-    subcatalogWrapper.style.display = 'none';
+    if (window.innerWidth > 1024) {
+      subcatalogWrapper.style.display = 'none';
+    }
   });
 });
 
