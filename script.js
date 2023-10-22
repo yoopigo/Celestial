@@ -246,6 +246,7 @@ showPasswordButtonOn.addEventListener('click', () => {
 
 closeLogin.addEventListener('click', () => {
   loginModal.classList.add('login__data-password-display');
+  openLoginMobile.classList.remove('tablet-menu__item-active');
 });
 
 openLogin.addEventListener('click', (evt) => {
@@ -299,6 +300,9 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', () => {
   let subcatalogItem = document.querySelector('.catalog__item-sub');
   let subcatalogWrapper = document.querySelector('.subcatalog__wrapper');
+  let catalogTabletButtonBack = document.querySelector(
+    '.catalog__tablet-icon--back'
+  );
 
   subcatalogItem.addEventListener('mouseover', () => {
     if (window.innerWidth > 1024) {
@@ -316,6 +320,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth > 1024) {
       subcatalogWrapper.style.display = 'none';
     }
+  });
+
+  subcatalogItem.addEventListener('click', function () {
+    if (window.innerWidth <= 1024) {
+      subcatalogWrapper.style.display = 'flex';
+    }
+  });
+
+  catalogTabletButtonBack.addEventListener('click', function () {
+    subcatalogWrapper.style.display = 'none';
   });
 });
 
