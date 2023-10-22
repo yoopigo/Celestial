@@ -12,6 +12,7 @@ const toggleBlock = document.querySelector('.mobile-header__menu-item-burger');
 const buttonTabletClosed = document.querySelector(
   '.catalog__tablet-icon--cross'
 );
+const tabletMenuHome = document.querySelector('.tablet-menu__home');
 
 const lineOne = document.querySelector('.line--one');
 const lineTwo = document.querySelector('.line--two');
@@ -30,6 +31,14 @@ toggleButton.addEventListener('click', () => {
 
 tabletButton.addEventListener('click', () => {
   catalog.classList.toggle('login__data-password-display');
+  tabletMenuHome.classList.toggle('tablet-menu__item-active');
+  tabletButton.classList.toggle('tablet-menu__item-active2');
+});
+
+tabletMenuHome.addEventListener('click', () => {
+  catalog.classList.add('login__data-password-display');
+  tabletMenuHome.classList.add('tablet-menu__item-active');
+  tabletButton.classList.remove('tablet-menu__item-active2');
 });
 
 toggleBlock.addEventListener('click', () => {
@@ -221,7 +230,7 @@ const showPasswordButtonOn = document.querySelector(
 const closeLogin = document.querySelector('.login__title-button');
 const loginModal = document.querySelector('.login');
 const openLogin = document.querySelector('.main-header__menu-down-login');
-const openLoginMobile = document.querySelector('.tablet-menu__login ');
+const openLoginMobile = document.querySelector('.tablet-menu__login');
 
 showPasswordButtonOff.addEventListener('click', () => {
   showPasswordButtonOff.classList.add('login__data-password-display');
@@ -247,12 +256,14 @@ openLogin.addEventListener('click', (evt) => {
 document.addEventListener('keydown', (evt) => {
   if (evt.key === 'Escape') {
     loginModal.classList.add('login__data-password-display');
+    openLoginMobile.classList.remove('tablet-menu__item-active');
   }
 });
 
 openLoginMobile.addEventListener('click', (evt) => {
   evt.preventDefault();
   loginModal.classList.toggle('login__data-password-display');
+  openLoginMobile.classList.toggle('tablet-menu__item-active');
 });
 
 //Catalog
@@ -283,6 +294,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+//subcatalog
+
 document.addEventListener('DOMContentLoaded', () => {
   let subcatalogItem = document.querySelector('.catalog__item-sub');
   let subcatalogWrapper = document.querySelector('.subcatalog__wrapper');
@@ -299,6 +312,8 @@ document.addEventListener('DOMContentLoaded', () => {
     subcatalogWrapper.style.display = 'none';
   });
 });
+
+//catalog slider
 
 const catalogSliderContainer = document.querySelector(
   '.catalog__slide-container'

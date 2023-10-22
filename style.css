@@ -1139,6 +1139,22 @@ ul.drop.visible {
   color: #8285a5;
 }
 
+.tablet-menu__item-active span {
+  color: #0064d8;
+}
+
+.tablet-menu__item-active svg path {
+  stroke: #0064d8;
+}
+
+.tablet-menu__item-active2 span {
+  color: #0064d8;
+}
+
+.tablet-menu__item-active2 svg path {
+  fill: #0064d8;
+}
+
 /* 
   catalog
 */
@@ -1150,6 +1166,12 @@ ul.drop.visible {
   z-index: 2;
   background-color: #fff;
   top: 125px;
+}
+
+@media (max-width: 1024px) {
+  .catalog-wrapper {
+    top: 85px;
+  }
 }
 
 .catalog {
@@ -1293,9 +1315,19 @@ ul.drop.visible {
 .catalog__slider {
   max-width: 345px;
   position: absolute;
-
   top: 40px;
   left: 797px;
+}
+
+@media (max-width: 1706px) {
+  .catalog__slider {
+    left: 587px;
+  }
+}
+@media (max-width: 1494px) {
+  .catalog__slider {
+    left: 445px;
+  }
 }
 
 .catalog__slide-container {
