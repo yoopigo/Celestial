@@ -1359,3 +1359,35 @@ ul.drop.visible {
 .active-dot {
   opacity: 100;
 }
+
+.catalog__dots-container {
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  gap: 6px;
+  bottom: 13px;
+  left: 143px;
+}
+
+.catalog__dot {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.catalog__active-dot {
+  opacity: 100;
+}
+
+.catalog__slide {
+  display: none;
+}
+
+.active-slide {
+  display: block;
+}

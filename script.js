@@ -299,3 +299,45 @@ document.addEventListener('DOMContentLoaded', () => {
     subcatalogWrapper.style.display = 'none';
   });
 });
+
+const catalogSliderContainer = document.querySelector(
+  '.catalog__slide-container'
+);
+const catalogSlides = document.querySelectorAll('.catalog__slide');
+const catalogPrevButton = document.querySelector(
+  '.catalog__slider-button-prev'
+);
+const catalogNextButton = document.querySelector(
+  '.catalog__slider-button-next'
+);
+const catalogDots = document.querySelectorAll('.catalog__dot');
+
+let currentCatalogSlideIndex = 0;
+
+function goToPrevSlide() {
+  catalogSlides[currentCatalogSlideIndex].classList.remove('active-slide');
+  catalogDots[currentCatalogSlideIndex].classList.remove('catalog__active-dot');
+
+  currentCatalogSlideIndex--;
+
+  if (currentCatalogSlideIndex < 0) {
+    currentCatalogSlideIndex = catalogSlides.length - 1;
+  }
+  catalogSlides[currentCatalogSlideIndex].classList.add('active-slide');
+  catalogDots[currentCatalogSlideIndex].classList.add('catalog__active-dot');
+}
+
+function goToNextSlide() {
+  catalogSlides[currentCatalogSlideIndex].classList.remove('active-slide');
+  catalogDots[currentCatalogSlideIndex].classList.remove('catalog__active-dot');
+  currentCatalogSlideIndex++;
+
+  if (currentCatalogSlideIndex >= catalogSlides.length) {
+    currentCatalogSlideIndex = 0;
+  }
+  catalogSlides[currentCatalogSlideIndex].classList.add('active-slide');
+  catalogDots[currentCatalogSlideIndex].classList.add('catalog__active-dot');
+}
+
+catalogPrevButton.addEventListener('click', goToPrevSlide);
+catalogNextButton.addEventListener('click', goToNextSlide);
