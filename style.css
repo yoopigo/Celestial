@@ -1182,6 +1182,12 @@ ul.drop.visible {
   list-style-type: none;
 }
 
+.catalog__item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .catalog__item {
   padding: 10px 8px 10px 16px;
   display: flex;
@@ -1197,6 +1203,10 @@ ul.drop.visible {
 .catalog__item:hover .subcatalog__items {
   color: #0056d8;
   stroke: #0056d8;
+}
+
+.catalog__item:hover {
+  background-color: #f2f7fd;
 }
 
 .subcatalog__wrapper {
