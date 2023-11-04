@@ -1336,7 +1336,7 @@ ul.drop.visible {
   display: block;
 }
 
-.login__data-password-display {
+.display-none {
   display: none;
 }
 

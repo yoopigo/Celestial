@@ -26,17 +26,17 @@ const catalog = document.querySelector('.catalog-wrapper');
 
 toggleButton.addEventListener('click', () => {
   toggleLines(lineOne, lineTwo, lineThree);
-  catalog.classList.toggle('login__data-password-display');
+  catalog.classList.toggle('display-none');
 });
 
 tabletButton.addEventListener('click', () => {
-  catalog.classList.toggle('login__data-password-display');
+  catalog.classList.toggle('display-none');
   tabletMenuHome.classList.toggle('tablet-menu__item-active');
   tabletButton.classList.toggle('tablet-menu__item-active2');
 });
 
 tabletMenuHome.addEventListener('click', () => {
-  catalog.classList.add('login__data-password-display');
+  catalog.classList.add('display-none');
   tabletMenuHome.classList.add('tablet-menu__item-active');
   tabletButton.classList.remove('tablet-menu__item-active2');
 });
@@ -46,7 +46,7 @@ toggleBlock.addEventListener('click', () => {
 });
 
 buttonTabletClosed.addEventListener('click', () => {
-  catalog.classList.toggle('login__data-password-display');
+  catalog.classList.toggle('display-none');
 });
 
 //Search
@@ -233,37 +233,37 @@ const openLogin = document.querySelector('.main-header__menu-down-login');
 const openLoginMobile = document.querySelector('.tablet-menu__login');
 
 showPasswordButtonOff.addEventListener('click', () => {
-  showPasswordButtonOff.classList.add('login__data-password-display');
-  showPasswordButtonOn.classList.remove('login__data-password-display');
+  showPasswordButtonOff.classList.add('display-none');
+  showPasswordButtonOn.classList.remove('display-none');
   passwordInput.type = 'text';
 });
 
 showPasswordButtonOn.addEventListener('click', () => {
-  showPasswordButtonOn.classList.add('login__data-password-display');
-  showPasswordButtonOff.classList.remove('login__data-password-display');
+  showPasswordButtonOn.classList.add('display-none');
+  showPasswordButtonOff.classList.remove('display-none');
   passwordInput.type = 'password';
 });
 
 closeLogin.addEventListener('click', () => {
-  loginModal.classList.add('login__data-password-display');
+  loginModal.classList.add('display-none');
   openLoginMobile.classList.remove('tablet-menu__item-active');
 });
 
 openLogin.addEventListener('click', (evt) => {
   evt.preventDefault();
-  loginModal.classList.toggle('login__data-password-display');
+  loginModal.classList.toggle('display-none');
 });
 
 document.addEventListener('keydown', (evt) => {
   if (evt.key === 'Escape') {
-    loginModal.classList.add('login__data-password-display');
+    loginModal.classList.add('display-none');
     openLoginMobile.classList.remove('tablet-menu__item-active');
   }
 });
 
 openLoginMobile.addEventListener('click', (evt) => {
   evt.preventDefault();
-  loginModal.classList.toggle('login__data-password-display');
+  loginModal.classList.toggle('display-none');
   openLoginMobile.classList.toggle('tablet-menu__item-active');
 });
 
