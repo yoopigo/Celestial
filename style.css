@@ -75,6 +75,7 @@ a {
 }
 
 .main-header__menu-up {
+  position: relative;
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid #e7e7e7;
@@ -111,6 +112,10 @@ a {
   margin-right: 15px;
 }
 
+.main-header__menu-up-item--two {
+  margin-right: 15px;
+}
+
 .main-header__menu-up-item--one svg,
 .main-header__menu-up-item--two svg {
   position: absolute;
@@ -124,11 +129,11 @@ a {
 
 .main-header__menu-up-item--one:hover svg path,
 .main-header__menu-up-item--two:hover svg path {
-  stroke: #0064d8; /* Замените цвет на желаемый */
+  stroke: #0064d8;
 }
 
-.main-header__menu-up-item--one:active svg,
-.main-header__menu-up-item--two:active svg {
+.main-header__menu-up-item--one:hover svg,
+.main-header__menu-up-item--two:hover svg {
   transform: rotate(180deg);
 }
 
@@ -332,6 +337,26 @@ a {
   background: url(img/header/icon_search.svg) no-repeat;
 }
 
+.main-header__menu-up-sublist-items {
+  list-style-type: none;
+  padding-left: 0;
+  position: absolute;
+  z-index: 3;
+  background-color: #fff;
+}
+
+.main-header__menu-up-sublist-items--company li,
+.main-header__menu-up-sublist-items--client li {
+  padding: 3px 20px;
+}
+
+.main-header__menu-up-sublist-items li:first-child {
+  margin-top: 10px;
+}
+
+.main-header__menu-up-sublist-items li:last-child {
+  margin-bottom: 10px;
+}
 /* 
   main
 */

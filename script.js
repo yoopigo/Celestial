@@ -333,6 +333,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const menuItems = document.querySelectorAll('.main-header__menu-up-item');
+const sublistItems = document.querySelectorAll(
+  '.main-header__menu-up-sublist-items'
+);
+
+menuItems.forEach((item, index) => {
+  item.addEventListener('mouseover', () => {
+    sublistItems[index].classList.remove('display-none');
+  });
+
+  item.addEventListener('mouseout', () => {
+    sublistItems[index].classList.add('display-none');
+  });
+});
+
 //catalog slider
 
 const catalogSliderContainer = document.querySelector(
