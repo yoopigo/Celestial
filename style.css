@@ -132,6 +132,15 @@ a {
   stroke: #0064d8;
 }
 
+.main-header__menu-up-item:hover .main-header__menu-up-sublist-items {
+  color: #8285a5;
+}
+
+.main-header__menu-up-sublist-item--company:hover,
+.main-header__menu-up-sublist-item--client:hover {
+  color: #0064d8;
+}
+
 .main-header__menu-up-item--one:hover svg,
 .main-header__menu-up-item--two:hover svg {
   transform: rotate(180deg);
@@ -215,6 +224,12 @@ a {
   font-family: 'Golos Text', sans-serif;
   font-size: 16px;
   margin-bottom: 17px;
+}
+
+.main-header__menu-down-search-wrapper--mobile {
+  z-index: 2;
+  width: 47%;
+  position: absolute;
 }
 
 .clear-btn {
@@ -797,6 +812,8 @@ ul.drop.visible {
   width: 430px;
   height: 30px;
   padding-left: 12px;
+  border: 0;
+  cursor: pointer;
 }
 
 .map {
