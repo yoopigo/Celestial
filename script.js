@@ -51,11 +51,25 @@ buttonTabletClosed.addEventListener('click', () => {
 
 //Search
 
-const searchInput = document.querySelector('.main-header__menu-down-search');
-const clearBtn = document.querySelector('.clear-btn');
+const searchInput = document.querySelectorAll('.main-header__menu-down-search');
+const clearBtn = document.querySelectorAll('.clear-btn');
+const searchButtonMobile = document.querySelector(
+  '.mobile-header__menu-item-search'
+);
+const searchInputMobile = document.querySelector(
+  '.main-header__menu-down-search-wrapper--mobile'
+);
 
-clearBtn.addEventListener('click', () => {
-  searchInput.value = '';
+clearBtn.forEach((item) => {
+  item.addEventListener('click', () => {
+    searchInput.forEach((input) => {
+      input.value = '';
+    });
+  });
+});
+
+searchButtonMobile.addEventListener('click', () => {
+  searchInputMobile.classList.toggle('display-none');
 });
 
 //slider
