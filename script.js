@@ -13,6 +13,7 @@ const buttonTabletClosed = document.querySelector(
   '.catalog__tablet-icon--cross'
 );
 const tabletMenuHome = document.querySelector('.tablet-menu__home');
+const menuMobile = document.querySelector('.menu-mobile');
 
 const lineOne = document.querySelector('.line--one');
 const lineTwo = document.querySelector('.line--two');
@@ -43,6 +44,7 @@ tabletMenuHome.addEventListener('click', () => {
 
 toggleBlock.addEventListener('click', () => {
   toggleLines(lineOneMobile, lineTwoMobile, lineThreeMobile);
+  menuMobile.classList.toggle('display-none');
 });
 
 buttonTabletClosed.addEventListener('click', () => {

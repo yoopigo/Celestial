@@ -210,6 +210,7 @@
 
       <div class="mobile-header__menu">
         <button
+          onclick="location.href='#map'"
           class="mobile-header__menu-item mobile-header__menu-item-local"
         ></button>
         <button
@@ -223,6 +224,35 @@
             <span class="line line--two line line--two-mobile-two"></span>
             <span class="line line--three line line--three-mobile-three"></span>
           </div>
+        </button>
+      </div>
+      <div class="menu-mobile display-none">
+        <button
+          class="main-header__menu-up-location main-header__menu-up-location-mobile"
+        >
+          <div>
+            <img
+              class="main-header__menu-up-location-img"
+              src="img/header/Icon.svg"
+              width="20px"
+              height="20px"
+            />
+            <span class="main-header__menu-up-location-text">Екатеринбург</span>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+          >
+            <path
+              stroke="#8285A5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m8 5 5 5-5 5"
+            />
+          </svg>
         </button>
       </div>
     </header>
@@ -375,7 +405,7 @@
           alt=""
         />
       </section>
-      <section class="map">
+      <section class="map" id="map">
         <p class="map__info-title">Магазины</p>
         <div class="map__info-container">
           <input class="map__info-input" type="text" placeholder="Город" />
