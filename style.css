@@ -440,7 +440,8 @@ html {
 }
 
 .menu-catalog-button:hover,
-.menu-location-button:hover {
+.menu-location-button:hover,
+.menu-mobile__social-icon:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -513,6 +514,25 @@ html {
   font-weight: 400;
   line-height: 140%;
   color: #8285a5;
+}
+
+.menu-mobile__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.menu-mobile__social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 /* 
