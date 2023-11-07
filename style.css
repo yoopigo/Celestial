@@ -1701,6 +1701,18 @@ ul.drop.visible {
   }
 }
 
+@media (max-width: 425px) {
+  .catalog__slider {
+    left: 37px;
+  }
+}
+
+@media (max-width: 412px) {
+  .catalog__slider {
+    left: 31px;
+  }
+}
+
 @media (max-width: 400px) {
   .catalog__slider {
     left: 27px;
