@@ -443,3 +443,27 @@ function goToNextSlide() {
 
 catalogPrevButton.addEventListener('click', goToPrevSlide);
 catalogNextButton.addEventListener('click', goToNextSlide);
+
+//counter
+
+const favoritesButton = document.querySelector(
+  '.main-header__menu-down-favorites'
+);
+
+const basketButton = document.querySelector('.main-header__menu-down-basket');
+
+const favoritesCounter = document.querySelector(
+  '.main-header__menu-down-favorites-counter'
+);
+const basketCounter = document.querySelector(
+  '.main-header__menu-down-basket-counter'
+);
+
+function Counter(button, count) {
+  button.addEventListener('click', () => {
+    count.classList.toggle('display-none');
+  });
+}
+
+Counter(favoritesButton, favoritesCounter);
+Counter(basketButton, basketCounter);
