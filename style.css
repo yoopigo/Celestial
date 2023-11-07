@@ -988,7 +988,7 @@ ul.drop.visible {
   grid-template-rows: auto auto auto auto;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 650px) {
   .map {
     grid-template-columns: 1fr;
     gap: 0;
@@ -1010,7 +1010,7 @@ ul.drop.visible {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 650px) {
   .map__info-title {
     grid-row: 1;
   }
@@ -1041,7 +1041,7 @@ ul.drop.visible {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 650px) {
   .map__info-container {
     grid-row: 2;
     width: 100%;
@@ -1069,7 +1069,7 @@ ul.drop.visible {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 650px) {
   .map__info-item {
     display: none;
   }
@@ -1099,7 +1099,7 @@ ul.drop.visible {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 650px) {
   .map__ya {
     grid-column: 1;
     grid-row: 3;
