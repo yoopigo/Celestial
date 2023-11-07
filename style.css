@@ -1624,7 +1624,7 @@ ul.drop.visible {
 
 @media (max-width: 1706px) {
   .catalog__slider {
-    left: 587px;
+    left: 10%;
   }
 }
 
