@@ -261,6 +261,12 @@ html {
   }
 }
 
+.line--one-mobile-one,
+.line--two-mobile-two,
+.line--three-mobile-three {
+  background-color: #0064d8;
+}
+
 .clear-btn {
   position: absolute;
   top: 12px;
@@ -370,7 +376,7 @@ html {
 }
 
 .mobile-header__menu-item-burger {
-  background-color: #0064d8;
+  background-color: #f2f7fd;
 }
 
 .mobile-header__menu-item-local {
@@ -1185,7 +1191,7 @@ ul.drop.visible {
 
 @media (max-width: 650px) {
   .login__title {
-    padding: 40px 16px 0px 16px;
+    padding: 20px 16px 0px 16px;
   }
 }
 
