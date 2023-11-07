@@ -1420,6 +1420,18 @@ ul.drop.visible {
   top: 125px;
 }
 
+@media (max-width: 2500px) {
+  .catalog-wrapper {
+    height: 125%;
+  }
+}
+
+@media (max-width: 390px) {
+  .catalog-wrapper {
+    height: 130%;
+  }
+}
+
 @media (max-width: 1024px) {
   .catalog-wrapper {
     top: 85px;
