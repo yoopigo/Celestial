@@ -1432,6 +1432,18 @@ ul.drop.visible {
   }
 }
 
+@media (max-width: 370px) {
+  .catalog-wrapper {
+    height: 140%;
+  }
+}
+
+@media (max-width: 320px) {
+  .catalog-wrapper {
+    height: 150%;
+  }
+}
+
 @media (max-width: 1024px) {
   .catalog-wrapper {
     top: 85px;
