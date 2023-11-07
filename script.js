@@ -144,22 +144,37 @@ const advantages = document.querySelector('.advantages');
 let isDragging = false;
 let startX, scrollLeft;
 
-advantages.addEventListener('mousedown', (e) => {
+advantages.addEventListener('mousedown', startDragging);
+advantages.addEventListener('touchstart', startDragging);
+
+window.addEventListener('mouseup', stopDragging);
+window.addEventListener('touchend', stopDragging);
+
+window.addEventListener('mousemove', drag);
+window.addEventListener('touchmove', drag);
+
+function startDragging(e) {
   isDragging = true;
-  startX = e.pageX - advantages.offsetLeft;
+  startX =
+    e.type === 'touchstart'
+      ? e.touches[0].pageX - advantages.offsetLeft
+      : e.pageX - advantages.offsetLeft;
   scrollLeft = advantages.scrollLeft;
-});
+}
 
-window.addEventListener('mouseup', () => {
+function stopDragging() {
   isDragging = false;
-});
+}
 
-window.addEventListener('mousemove', (e) => {
+function drag(e) {
   if (!isDragging) return;
-  const x = e.pageX - advantages.offsetLeft;
+  const x =
+    e.type === 'touchmove'
+      ? e.touches[0].pageX - advantages.offsetLeft
+      : e.pageX - advantages.offsetLeft;
   const scrollX = scrollLeft - (x - startX);
   advantages.scrollLeft = scrollX;
-});
+}
 
 //
 
