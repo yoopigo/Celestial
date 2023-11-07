@@ -295,27 +295,28 @@ showPasswordButtonOn.addEventListener('click', () => {
   passwordInput.type = 'password';
 });
 
-closeLogin.addEventListener('click', () => {
-  loginModal.classList.add('display-none');
-  openLoginMobile.classList.remove('tablet-menu__item-active');
-});
-
 openLogin.addEventListener('click', (evt) => {
   evt.preventDefault();
   loginModal.classList.toggle('display-none');
+  document.querySelector('.overlay').classList.toggle('display-none');
+});
+
+closeLogin.addEventListener('click', () => {
+  loginModal.classList.add('display-none');
+  document.querySelector('.overlay').classList.add('display-none');
 });
 
 document.addEventListener('keydown', (evt) => {
   if (evt.key === 'Escape') {
     loginModal.classList.add('display-none');
-    openLoginMobile.classList.remove('tablet-menu__item-active');
+    document.querySelector('.overlay').classList.add('display-none');
   }
 });
 
 openLoginMobile.addEventListener('click', (evt) => {
   evt.preventDefault();
   loginModal.classList.toggle('display-none');
-  openLoginMobile.classList.toggle('tablet-menu__item-active');
+  document.querySelector('.overlay').classList.toggle('display-none');
 });
 
 //Catalog

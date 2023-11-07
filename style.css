@@ -476,7 +476,8 @@ html {
 
 .menu-catalog-button:hover,
 .menu-location-button:hover,
-.menu-mobile__social-icon:hover {
+.menu-mobile__social-icon:hover,
+.products-categories__item:hover .products-categories__item-img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -850,6 +851,7 @@ html {
 .products-categories__left {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -1183,7 +1185,7 @@ ul.drop.visible {
 
 @media (max-width: 650px) {
   .login__title {
-    padding: 20px 16px 0px 16px;
+    padding: 40px 16px 0px 16px;
   }
 }
 
@@ -1611,10 +1613,6 @@ ul.drop.visible {
   display: block;
 }
 
-.display-none {
-  display: none;
-}
-
 .catalog__slider {
   max-width: 345px;
   position: absolute;
@@ -1827,4 +1825,20 @@ ul.drop.visible {
 
 .active-slide {
   display: block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1b225c;
+  opacity: 65%;
+  z-index: 2;
+  display: block;
+}
+
+.display-none {
+  display: none;
 }
